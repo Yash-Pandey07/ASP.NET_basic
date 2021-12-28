@@ -1,0 +1,60 @@
+<div style="text-align: center;">
+{{title}}
+</div>
+
+<h2>Parent App Component</h2>
+<!-- <label>Enter Parent Component Value: </label>
+<input type="text" #pdata (keyup)="0"><br>
+<label>Value from the child component is : {{childData}}</label> 
+<app-product-list (childEvent)="catchChildEvent($event)" [parentData] ="pdata.value"></app-product-list>
+-->
+<div>Days:
+    <select name="month">
+        <option *ngFor="let i of days">{{i}}</option>
+    </select>
+<br>
+<div>
+    <table id="users">
+        <tr>
+        <th>
+            Phone number
+        </th><br>
+    </tr>
+        <tbody>
+            <tr *ngFor="let i of phone">
+                <td >
+                    {{i}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Even & Odd Numbers:</h2>
+                    <div *ngFor="let number of numbers">
+                    <div *ngIf="number % 2==0;else showOdd">
+                        <span class="even">{{number}} is a Even Number.</span>
+                    </div>
+                    <ng-template #showOdd>
+                        <span class="odd">{{number}} is a Odd Number.</span>
+                    </ng-template>
+                    </div>
+                </td>   
+</tr>
+            <!-- <tr
+    *ngFor="let e of numbers; let even=even;let odd=odd;">
+    <td>{{even}}</td>
+    <td>{{odd}}</td>
+  </tr> -->
+        </tbody>
+    </table>
+</div>
+<br>
+
+    <!-- <div *ngFor='let name of listname let odd=odd;'>
+        <hello [nameObj]="{ name : name , odd : odd }"></hello>
+      </div> -->
+
+
+
+<!-- <app-product-list></app-product-list> -->
+<app-ng-switch-component></app-ng-switch-component>
+<router-outlet></router-outlet>
