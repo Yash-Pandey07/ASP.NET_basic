@@ -1,0 +1,8 @@
+<p>calculator works!</p>
+<div>
+    <span *ngIf="isAvalible; then condition1 else condition2">
+        Condition is valid.
+    </span>
+    <ng-template #condition1>20 controls here</ng-template>
+    <ng-template #condition2>6 controls here</ng-template>
+</div>
